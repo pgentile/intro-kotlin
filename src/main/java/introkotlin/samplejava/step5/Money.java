@@ -1,7 +1,5 @@
 package introkotlin.samplejava.step5;
 
-import com.google.common.base.MoreObjects;
-
 import java.util.Objects;
 
 /**
@@ -35,10 +33,7 @@ public final class Money {
 
     @Override
     public String toString() {
-        return MoreObjects.toStringHelper(this)
-            .add("value", value)
-            .add("currency", currency)
-            .toString();
+        return "Money(value=" + value + ", currency=" + currency + ")";
     }
 
     @Override
