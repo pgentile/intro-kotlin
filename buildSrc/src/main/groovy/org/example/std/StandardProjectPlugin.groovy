@@ -39,9 +39,27 @@ class StandardProjectPlugin implements Plugin<Project> {
     }
 
     private void configureKotlin(Project project) {
-        compile "org.jetbrains.kotlin:kotlin-stdlib"
-        compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-        compile "org.jetbrains.kotlin:kotlin-reflect"
+        project.apply {
+            kotlin_version = '1.2.30'
+
+            compileKotlin {
+                kotlinOptions {
+                    jvmTarget = "1.8"
+                }
+            }
+
+            compileTestKotlin {
+                kotlinOptions {
+                    jvmTarget = "1.8"
+                }
+            }
+        }
+
+        project.dependencies {
+            compile "org.jetbrains.kotlin:kotlin-stdlib"
+            compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+            compile "org.jetbrains.kotlin:kotlin-reflect"
+        }
     }
 
     /**
