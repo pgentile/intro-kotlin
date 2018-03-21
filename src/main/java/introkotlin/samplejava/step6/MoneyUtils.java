@@ -8,8 +8,8 @@ public final class MoneyUtils {
     }
 
     public Money toBitcoin(Money money) {
-        final double changeRate = ThreadLocalRandom.current().nextDouble(0, 0.001);
-        return new Money(money.getValue() * changeRate, "BITCOIN");
+        final double exchangeRate = ThreadLocalRandom.current().nextDouble(0, 0.001);
+        return new Money(money.getValue() * exchangeRate, "BITCOIN");
     }
 
 }
