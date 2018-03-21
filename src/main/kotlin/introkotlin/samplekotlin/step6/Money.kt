@@ -30,6 +30,8 @@ fun Money.toBitcoin(): Money {
 }
 
 fun main(vararg args: String) {
-  val money = Money(10.0, "EURO")
-  System.out.println("Money = ${money.toBitcoin()}")
+  repeat(10) {
+    val money = Money(10.0, "EURO")
+    System.out.println("Money = ${money.toBitcoin()}")
+  }
 }
