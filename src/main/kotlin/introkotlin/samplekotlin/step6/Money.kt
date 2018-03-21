@@ -25,7 +25,7 @@ data class Money(
  * méthodes utilitaires.
  */
 fun Money.toBitcoin(): Money {
-  val changeRate = ThreadLocalRandom.current().nextDouble(0.0, 0.001) + 0.001
+  val changeRate = ThreadLocalRandom.current().nextDouble(0.0, 0.001)
   return Money(value = value * changeRate, currency = "BITCOIN")
 }
 
