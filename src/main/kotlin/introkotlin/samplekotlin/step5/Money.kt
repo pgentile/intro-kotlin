@@ -9,7 +9,7 @@ data class Money(
 ) {
 
   operator fun plus(other: Money): Money {
-    return if (currency != other.currency) {
+    return if (currency == other.currency) {
       // copy : méthode introduite par le caractère "data" de la classe
       // On peut également nommer les arguments des méthodes, pour mieux
       // s'y retrouver par la suite
