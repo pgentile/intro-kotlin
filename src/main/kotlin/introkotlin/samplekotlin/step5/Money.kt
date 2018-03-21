@@ -9,13 +9,14 @@ data class Money(
 ) {
 
   operator fun plus(other: Money): Money {
-    if (currency != other.currency) {
+    return if (currency != other.currency) {
+      // copy : méthode introduite par le caractère "data" de la classe
+      // On peut également nommer les arguments des méthodes, pour mieux
+      // s'y retrouver par la suite
+      copy(value = value + other.value)
+    } else {
       throw IllegalArgumentException("Different currencies: $currency != ${other.currency}")
     }
-    // copy : méthode introduite par le caractère "data" de la classe
-    // On peut également nommer les arguments des méthodes, pour mieux
-    // s'y retrouver par la suite
-    return copy(value = value + other.value)
   }
 
 }
