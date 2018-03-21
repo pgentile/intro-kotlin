@@ -24,7 +24,8 @@ class Money(
   override fun equals(other: Any?): Boolean {
     // Le when pour faire une sorte de switch
     // On a également le compilateur qui détecte automatiquement
-    // le this de other pour la branche "other is Money"
+    // le type de other pour la branche "other is Money". Pas
+    // besoin de caster
     return when {
       this === other -> true
       other is Money -> value == other.value && currency == other.currency
