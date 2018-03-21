@@ -5,6 +5,9 @@ import java.util.*
 /**
  * On a ici gratuitement... un constructeur,
  * deux propriétés et leurs getters associés.
+ *
+ * On supprime le caractère ouvert de la classe : on
+ * ne peut plus en hériter.
  */
 class Money(
   val value: Double,

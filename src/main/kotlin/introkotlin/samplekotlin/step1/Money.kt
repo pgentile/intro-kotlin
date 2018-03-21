@@ -1,6 +1,6 @@
 package introkotlin.samplekotlin.step1
 
-class Money {
+open class Money {
 
   var value: Double = 0.0
 
