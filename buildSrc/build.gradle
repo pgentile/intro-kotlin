@@ -1,0 +1,18 @@
+repositories {
+    gradlePluginPortal()
+    mavenCentral()
+}
+
+
+apply plugin: 'groovy'
+
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+
+    compile 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.30'
+    compile 'net.ltgt.gradle:gradle-apt-plugin:0.15'
+    compile 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.13'
+    compile 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+}
