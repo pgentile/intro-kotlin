@@ -3,7 +3,7 @@ package introkotlin.samplejava.step6;
 import java.util.Objects;
 
 /**
- * On additionne.
+ * Aucun changement par rapport au step 5.
  */
 public final class Money {
 
@@ -24,7 +24,7 @@ public final class Money {
         return currency;
     }
 
-    public Money addWith(Money other) {
+    public Money plus(Money other) {
         if (!currency.equals(other.currency)) {
             throw new IllegalArgumentException("Different currencies: " + currency + " != " + other.currency);
         }

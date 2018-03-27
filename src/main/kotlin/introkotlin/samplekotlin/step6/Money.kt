@@ -1,3 +1,6 @@
+/**
+ * Démonstration des extension methods.
+ */
 package introkotlin.samplekotlin.step6
 
 import java.util.concurrent.ThreadLocalRandom
