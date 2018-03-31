@@ -33,7 +33,7 @@ public final class Money {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-        final Money other = (Money) obj;
+        final var other = (Money) obj;
         return other.value == value && Objects.equals(currency, other.currency);
     }
 
