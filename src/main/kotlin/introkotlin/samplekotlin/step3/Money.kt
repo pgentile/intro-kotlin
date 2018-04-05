@@ -36,6 +36,6 @@ class Money(
   /**
    * Autre syntaxe pour implémenter une méthode, + template string.
    */
-  override fun toString() = "Money(value=$value, currency='$currency')"
+  override fun toString() = "Money(value=$value, currency=$currency)"
 
 }
