@@ -23,5 +23,5 @@ data class Money(
 
 fun main(vararg args: String) {
   val money = Money(10.0, "EURO") + Money(5.0, "EURO")
-  System.out.println("Money = $money")
+  println("Money = $money")
 }
