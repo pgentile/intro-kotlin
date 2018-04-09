@@ -8,7 +8,7 @@ public final class MoneyUtils {
     }
 
     public static Money toBitcoin(Money money) {
-        final double exchangeRate = ThreadLocalRandom.current().nextDouble(0, 0.001);
+        final var exchangeRate = ThreadLocalRandom.current().nextDouble(0, 0.001);
         return new Money(money.getValue() * exchangeRate, "BITCOIN");
     }
 
